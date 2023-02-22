@@ -5,6 +5,8 @@ workflows:
     scripts:
       - name: Build Android App Bundle
         working_directory: android
-        script: /android/gradlew bundleRelease
+        script: 
+          - flutter packages pub get
+          - flutter build apk --release
     artifacts:
       - build/**/outputs/bundle/**/*.aab
