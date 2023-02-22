@@ -3,10 +3,10 @@ workflows:
     environment:
       flutter: default
     scripts:
-      - name: Build Android App Bundle
-        working_directory: android
-        script: 
-          - flutter packages pub get
-          - flutter build apk --release
+      name: Build Android App Bundle
+      working_directory: android
+      script: 
+        - flutter packages pub get
+        - flutter build apk --release
     artifacts:
       - build/**/outputs/bundle/**/*.aab
